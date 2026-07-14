@@ -71,6 +71,9 @@ export default function QuizPlay() {
     if (isRevealed) return
     setIsRevealed(true)
     const updated = recordAnswer(selected, selected == null)
+    if (advanceTimeoutRef.current) {
+      clearTimeout(advanceTimeoutRef.current)
+    }
     advanceTimeoutRef.current = setTimeout(() => goToNext(updated), REVEAL_DELAY_MS)
   }
 
@@ -90,6 +93,9 @@ export default function QuizPlay() {
     if (selected == null || isRevealed) return
     setIsRevealed(true)
     const updated = recordAnswer(selected, false)
+    if (advanceTimeoutRef.current) {
+      clearTimeout(advanceTimeoutRef.current)
+    }
     advanceTimeoutRef.current = setTimeout(() => goToNext(updated), REVEAL_DELAY_MS)
   }
 

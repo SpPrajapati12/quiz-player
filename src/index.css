@@ -5,36 +5,36 @@
 /* Theme variables: default (light) and .dark overrides */
 :root {
   /* Light theme (default) */
-  --color-stage-bg: #F8FAFF;
+  --color-stage-bg: #EFF6FF;
   --color-stage-panel: #FFFFFF;
-  --color-stage-panel2: #F3F4F6;
-  --color-stage-line: #E6E9F2;
+  --color-stage-panel2: #EFF6FF;
+  --color-stage-line: #DDE8FF;
 
-  --color-gold: #F2B705;
-  --color-gold-soft: #F7CE47;
+  --color-gold: #F59E0B;
+  --color-gold-soft: #FCD34D;
   --color-teal: #2DD4BF;
-  --color-coral: #FB6F92;
+  --color-coral: #FB7185;
 
-  --color-ink: #0F1724;
-  --color-ink-dim: #64748B;
+  --color-ink: #0F172A;
+  --color-ink-dim: #475569;
   --color-ink-faint: #94A3B8;
 }
 
 .dark {
   /* Dark theme overrides */
-  --color-stage-bg: #14132B;
-  --color-stage-panel: #1E1B4B;
-  --color-stage-panel2: #262163;
-  --color-stage-line: #332C7A;
+  --color-stage-bg: #020617;
+  --color-stage-panel: #111827;
+  --color-stage-panel2: #1F2937;
+  --color-stage-line: #334155;
 
-  --color-gold: #F2B705;
-  --color-gold-soft: #F7CE47;
-  --color-teal: #2DD4BF;
-  --color-coral: #FB6F92;
+  --color-gold: #FBBF24;
+  --color-gold-soft: #FDE68A;
+  --color-teal: #38BDF8;
+  --color-coral: #F472B6;
 
-  --color-ink: #F5F3FF;
-  --color-ink-dim: #B4AEDC;
-  --color-ink-faint: #7E77B0;
+  --color-ink: #E2E8F0;
+  --color-ink-dim: #94A3B8;
+  --color-ink-faint: #CBD5E1;
 }
 
 @layer base {
@@ -49,18 +49,19 @@
   body {
     @apply bg-stage-bg text-ink font-body antialiased;
     background-image:
-      radial-gradient(circle at 15% 0%, rgba(45, 212, 191, 0.10), transparent 40%),
-      radial-gradient(circle at 85% 10%, rgba(242, 183, 5, 0.10), transparent 45%);
+      radial-gradient(circle at 15% 0%, rgba(56, 189, 248, 0.12), transparent 36%),
+      radial-gradient(circle at 84% 10%, rgba(251, 145, 185, 0.12), transparent 40%);
     background-attachment: fixed;
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
   ::selection {
-    background: #f2b705;
-    color: #14132b;
+    background: rgba(245, 158, 11, 0.2);
+    color: var(--color-ink);
   }
   :focus-visible {
-    outline: 2px solid #f2b705;
-    outline-offset: 3px;
-    border-radius: 4px;
+    outline: 2px solid rgba(245, 158, 11, 0.9);
+    outline-offset: 4px;
+    border-radius: 0.5rem;
   }
 }
 
