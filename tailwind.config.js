@@ -1,29 +1,31 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: 'class',
   content: ['./index.html', './src/**/*.{js,jsx}'],
   theme: {
     extend: {
+      // Colors are mapped to CSS variables so themes can be swapped at runtime
       colors: {
         stage: {
-          bg: '#14132B',
-          panel: '#1E1B4B',
-          panel2: '#262163',
-          line: '#332C7A',
+          bg: 'var(--color-stage-bg)',
+          panel: 'var(--color-stage-panel)',
+          panel2: 'var(--color-stage-panel2)',
+          line: 'var(--color-stage-line)',
         },
         gold: {
-          DEFAULT: '#F2B705',
-          soft: '#F7CE47',
+          DEFAULT: 'var(--color-gold)',
+          soft: 'var(--color-gold-soft)',
         },
         teal: {
-          DEFAULT: '#2DD4BF',
+          DEFAULT: 'var(--color-teal)',
         },
         coral: {
-          DEFAULT: '#FB6F92',
+          DEFAULT: 'var(--color-coral)',
         },
         ink: {
-          DEFAULT: '#F5F3FF',
-          dim: '#B4AEDC',
-          faint: '#7E77B0',
+          DEFAULT: 'var(--color-ink)',
+          dim: 'var(--color-ink-dim)',
+          faint: 'var(--color-ink-faint)',
         },
       },
       fontFamily: {

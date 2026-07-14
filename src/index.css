@@ -2,6 +2,41 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Theme variables: default (light) and .dark overrides */
+:root {
+  /* Light theme (default) */
+  --color-stage-bg: #F8FAFF;
+  --color-stage-panel: #FFFFFF;
+  --color-stage-panel2: #F3F4F6;
+  --color-stage-line: #E6E9F2;
+
+  --color-gold: #F2B705;
+  --color-gold-soft: #F7CE47;
+  --color-teal: #2DD4BF;
+  --color-coral: #FB6F92;
+
+  --color-ink: #0F1724;
+  --color-ink-dim: #64748B;
+  --color-ink-faint: #94A3B8;
+}
+
+.dark {
+  /* Dark theme overrides */
+  --color-stage-bg: #14132B;
+  --color-stage-panel: #1E1B4B;
+  --color-stage-panel2: #262163;
+  --color-stage-line: #332C7A;
+
+  --color-gold: #F2B705;
+  --color-gold-soft: #F7CE47;
+  --color-teal: #2DD4BF;
+  --color-coral: #FB6F92;
+
+  --color-ink: #F5F3FF;
+  --color-ink-dim: #B4AEDC;
+  --color-ink-faint: #7E77B0;
+}
+
 @layer base {
   * {
     -webkit-tap-highlight-color: transparent;

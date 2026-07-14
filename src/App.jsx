@@ -2,6 +2,7 @@ import { Route, Routes, Link } from 'react-router-dom'
 import QuizList from './pages/QuizList'
 import QuizPlay from './pages/QuizPlay'
 import QuizResult from './pages/QuizResult'
+import ThemeToggle from './components/ThemeToggle'
 
 function NotFound() {
   return (
@@ -32,6 +33,9 @@ export default function App() {
               Quiz Show
             </span>
           </Link>
+          <div className="flex items-center gap-3">
+            <ThemeToggle />
+          </div>
         </div>
       </header>
 
