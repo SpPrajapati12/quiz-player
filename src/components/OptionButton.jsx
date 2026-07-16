@@ -15,11 +15,11 @@ export default function OptionButton({
 
   if (isRevealed) {
     if (isCorrectAnswer) {
-      stateClasses = 'border-teal bg-teal/10'
-      letterClasses = 'bg-teal text-stage-bg'
+      stateClasses = 'border-green-500 bg-teal/10'
+      letterClasses = 'bg-green-500 text-white'
     } else if (isSelected && !isCorrectAnswer) {
-      stateClasses = 'border-coral bg-coral/10'
-      letterClasses = 'bg-coral text-stage-bg'
+      stateClasses = 'border-red-500 bg-coral/10'
+      letterClasses = 'bg-red-500 text-white'
     } else {
       stateClasses = 'border-stage-line bg-stage-panel/50 opacity-50'
     }

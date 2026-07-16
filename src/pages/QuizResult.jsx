@@ -185,7 +185,7 @@ export default function QuizResult() {
                 onChange={(e) => setName(e.target.value)}
                 placeholder="Your name"
                 maxLength={30}
-                className="w-full rounded-xl border-2 border-stage-line bg-stage-bg/60 px-4 py-2.5 text-ink placeholder:text-ink-faint focus:border-gold"
+                className="w-full rounded-xl border-2 border-stage-line bg-stage-panel px-4 py-2.5 text-ink placeholder:text-ink-faint shadow-sm transition duration-150 focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/20"
               />
               <button
                 type="submit"
